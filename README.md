@@ -79,6 +79,18 @@ Custom Font Integration: Hướng dẫn chi tiết cách thêm và sử dụng f
 
 ## 🍃 Hiện thực 
 
+----------- Phần hiển thị 1 -------------------------------------------------------------------------
+
+[ALIS-tech-mac.webm](https://github.com/user-attachments/assets/1c96a8ad-3fa0-42e3-b11e-15cbcbbdb31a)
+
+----------- Phần hiển thị 2 -------------------------------------------------------------------------
+
+[ALIS-tech-mac2.webm](https://github.com/user-attachments/assets/29b464ca-2604-4cd9-9a7b-7f5fcb0f788e)
+
+
+#### Mobile
+
+[ALIS-tech-mobile.webm](https://github.com/user-attachments/assets/055cf851-ab49-49c6-8e75-aee853e087d8)
 
 
 # 📞 Liên Hệ
