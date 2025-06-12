@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Kavoon&family=Sail&family=Tangerine:wght@400;700&display=swap');
+@import "tailwindcss";
+
+
+.fleur-de-leah-regular {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.tangerine-regular {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.sail-regular {
+  font-family: "Sail", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.kavoon-regular {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  
+}
