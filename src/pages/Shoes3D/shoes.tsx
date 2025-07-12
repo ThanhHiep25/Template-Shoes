@@ -1,6 +1,6 @@
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei'; // OrbitControls cho phép xoay, useGLTF để tải model
+import { OrbitControls, useGLTF } from '@react-three/drei'; 
 import { motion } from 'framer-motion';
 import { Suspense, useState } from 'react';
 
@@ -10,7 +10,7 @@ interface ShoesModelProps {
     modelPath: string;
 }
 
-function CarModel({ modelPath }: ShoesModelProps) {
+function ShoeModel({ modelPath }: ShoesModelProps) {
     const { scene } = useGLTF(modelPath);
     return <primitive object={scene} />;
 }
@@ -46,6 +46,7 @@ const Shoes3DViewer: React.FC = () => {
             price: "3.000.000 VND",
             image: "/shoes1.jpg",
             modelPath: "/base_basic_pbr.glb",
+            description: 'Air Jordan 1 Mid is a classic sneaker designed by Nike and released in 1985. It is known for its iconic design with a white and blue upper, black sole, and red stripe on the side.',
         },
         {
             id: 2,
@@ -53,6 +54,7 @@ const Shoes3DViewer: React.FC = () => {
             price: "2.000.000 VND",
             image: "/shoes2.jpg",
             modelPath: "/base_basic_pbr2.glb",
+            description: 'Nike Vomero 18 is a running shoe designed by Nike and released in 2018. It is known for its iconic design with a white and blue upper, black sole, and red stripe on the side.',
         },
         {
             id: 3,
@@ -60,6 +62,7 @@ const Shoes3DViewer: React.FC = () => {
             price: "1.500.000 VND",
             image: "/shoes3.jpg",
             modelPath: "/base_basic_pbr3.glb",
+            description: 'Nike Court Vision is a basketball shoe designed by Nike and released in 2018. It is known for its iconic design with a white and blue upper, black sole, and red stripe on the side.',    
         },
     ]
     // const shoesModelPath = "/base_basic_pbr.glb";
@@ -92,8 +95,8 @@ const Shoes3DViewer: React.FC = () => {
                         initial="hidden"
                         animate="visible"
                         className="
-                            absolute sm:top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                            font-bold text-[200px] md:text-[400px] lg:text-[600px] 
+                            absolute sm:top-[40%] top-[10%] left-1/2 transform -translate-x-1/2 -translate-y-1/2
+                            font-bold text-[200px] md:text-[400px] lg:text-[500px] 
                             text-transparent 
                             bg-clip-text 
                             bg-gradient-to-tl from-black via-gray-700 to-gray-100
@@ -116,14 +119,14 @@ const Shoes3DViewer: React.FC = () => {
 
                         {/* Tải và hiển thị mô hình */}
                         <Suspense fallback={null}>
-                            <CarModel modelPath={currentModel} />
+                            <ShoeModel modelPath={currentModel} />
                         </Suspense>
                         {/* OrbitControls cho phép người dùng xoay, phóng to/thu nhỏ bằng chuột */}
                         <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
                     </Canvas>
 
 
-                        {/* Biến thể cho mô hình */}
+                    {/* Biến thể cho mô hình */}
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2  flex sm:flex-row flex-col justify-center gap-4 sm:mb-6">
                         <button
                             onClick={() => setCurrentModel(shoes[0].modelPath)}
@@ -160,8 +163,8 @@ const Shoes3DViewer: React.FC = () => {
                             className={`group relative p-4 rounded-2xl backdrop-blur-xl border-2 border-indigo-500/20 bg-gradient-
                                 to-br from-indigo-900/20 via-black-900/20 to-black/20 shadow-2xl hover:shadow-indigo-500/30 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 active:scale-95 transition-all duration-500 ease-out cursor-pointer hover:border-indigo-400/60 overflow-hidden 
                                 ${currentModel === shoes[1].modelPath
-                                ? "bg-black/50 text-white border-yellow-400/60"
-                                : ""
+                                    ? "bg-black/50 text-white border-yellow-400/60"
+                                    : ""
                                 }`}
 
                         >
@@ -188,14 +191,14 @@ const Shoes3DViewer: React.FC = () => {
                         </button>
 
 
-                          <button
+                        <button
                             onClick={() => setCurrentModel(shoes[2].modelPath)}
                             className={`group relative p-4 rounded-2xl backdrop-blur-xl border-2
                                  border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 via-black-900/20 to-black/20 
                                  shadow-2xl hover:shadow-indigo-500/30 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 active:scale-95
                                   transition-all duration-500 ease-out cursor-pointer hover:border-indigo-400/60 overflow-hidden ${currentModel === shoes[2].modelPath
-                                ? "bg-black/50 text-white border-yellow-400/60"
-                                : ""
+                                    ? "bg-black/50 text-white border-yellow-400/60"
+                                    : ""
                                 }`}
 
                         >
@@ -218,7 +221,7 @@ const Shoes3DViewer: React.FC = () => {
                                     </p>
 
                                 </div>
-                               
+
                             </div>
                         </button>
                     </div>

@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion"; // Import AnimatePresen
 
 const menuItems = [
     { label: "Home", target: "home" },
-    { label: "Specifications", target: "specifications" },
+    { label: "3D view", target: "viewer" },
+    { label: "Collection", target: "collection" },
     { label: "Design", target: "design" },
-    { label: "Opening time", target: "opening" },
-    { label: "3D Viewer", target: "viewer" } // Thêm mục 3D Viewer nếu bạn có component đó
+    { label: "...?", target: "viewer" } 
 ];
 
 const buttonVariants = {
