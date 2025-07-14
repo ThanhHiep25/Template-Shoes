@@ -21,6 +21,7 @@ const designCards = [
 
 
 const Home: React.FC = () => {
+  
   return (
     <div className="w-full mt-[-5rem] bg-gradient-to-tl from-black via-gray-700 to-gray-100">
       {/* Banner Section */}
