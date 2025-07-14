@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Kavoon&family=Sail&family=Tangerine:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -34,4 +35,30 @@
 .bitcount-grid-double {
   font-family: "Bitcount Grid Double", system-ui;
   font-optical-sizing: auto;
+}
+
+.roboto{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+
+/* global.css or index.css */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #333; /* Dark track */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #555; /* Darker thumb */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Even darker on hover */
 }

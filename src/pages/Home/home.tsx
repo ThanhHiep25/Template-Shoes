@@ -35,10 +35,10 @@ const Home: React.FC = () => {
         >
           <i className="md:text-[12rem] text-[8rem] bitcount-grid-double text-white ">Nike
           </i>
-          <span className="text-xl font-bold text-gray-400 ">
+          <span className="text-xl font-bold text-gray-400 roboto">
             Air Jordan 1 Mid
           </span>
-          <p className="text-3xl font-bold text-white bg-clip-text">Just do it !</p>
+          <p className="text-3xl font-bold text-white bg-clip-text roboto">Just do it !</p>
 
           <button className="w-1/2 mt-10 bg-amber-400 hover:bg-amber-500 text-white font-bold py-4 px-4 text-lg rounded-full transition-all cursor-pointer">
             View Detail
@@ -50,8 +50,8 @@ const Home: React.FC = () => {
         <motion.div
           className="relative flex items-center justify-center w-full max-w-2xl">
           <motion.img
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.5 , rotate: 30}}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1 }}
             src={Na1Yellow}
             alt="Nike JD1M"
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
         >
           <div className="w-full">
             <motion.img
-              initial={{ opacity: 0, x: -200 }} 
+              initial={{ opacity: 0, x: -100 }} 
               whileInView={{ opacity: 1, x: 0 }} 
               viewport={{ once: true, amount: 0.5 }} 
               transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
               src={banner1} className="w-full md:h-80 h-60" alt="Jodan1" />
 
             <motion.img
-              initial={{ opacity: 0, x: -200 }} 
+              initial={{ opacity: 0, x: -100 }} 
               whileInView={{ opacity: 1, x: 0 }} 
               viewport={{ once: true, amount: 0.5 }} 
               transition={{ duration: 1, ease: "easeInOut" }}
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
           </div>
           <div className="flex items-center justify-center">
             <motion.img
-              initial={{ opacity: 0, y: -200 }} 
+              initial={{ opacity: 0, y: -100 }} 
               whileInView={{ opacity: 1, y: 0 }} 
               viewport={{ once: true, amount: 0.5 }} 
               transition={{ duration: 1, ease: "easeInOut" }}
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
               src={banner3} className="w-1/2 md:h-80 h-60" alt="Jodan3" />
 
             <motion.img
-              initial={{ opacity: 0, x: 200 }} 
+              initial={{ opacity: 0, x: 50 }} 
               whileInView={{ opacity: 1, x: 0 }} 
               viewport={{ once: true, amount: 0.5 }} 
               transition={{ duration: 1, ease: "easeInOut" }}
